@@ -36,4 +36,16 @@ flowchart LR
 
 `TypeScript` · `NestJS` · `PostgreSQL` · `Redis` · `RabbitMQ` · `Docker` · `Kubernetes` · `GitLab CI`
 
+## Обезличенный пример политики доступа
+
+```ts
+type TreeRole = 'owner' | 'editor' | 'viewer';
+
+function canPublish(role: TreeRole) {
+  return role === 'owner';
+}
+```
+
+*Это схематичный публичный пример; реальные правила, данные и endpoints не раскрываются.*
+
 Платформа рассчитана на приватность семейных данных: публичная витрина не содержит исходный production-код, базы данных, секреты, внутренние endpoints или данные пользователей.
